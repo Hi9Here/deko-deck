@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`deko-deck`
+Deck Element for Deko
+
+@demo demo/index.html 
+-->
+
+<dom-module id="deko-deck">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'deko-deck',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'deko-deck',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
