@@ -13,10 +13,8 @@ Deck Element for Deko
         display: inline-block;
         text-align: center;
         height: 100%;
-        background: red;
         color: #fff;
         font-family: Roboto, Arial, Helvetica, sans-serif;
-        padding: 10px 0px 10px 0px;
       }
       h2 {
         transform: rotate(90deg);
@@ -26,6 +24,8 @@ Deck Element for Deko
       #deck-box {
         height: 100%;
         width: 100%;
+        display: inline-block;
+        padding: 10px 0px 10px 0px;
       }
       a {
         text-decoration: none;
@@ -34,8 +34,8 @@ Deck Element for Deko
     </style>
   <template>
       <a href="[[deckLink]]">
-        <div id="deck-box">
-         <h2>[[deckName]]</h2>
+        <div id="deck-box" style="background: [[deckColor]]">
+          <h2>[[deckName]]</h2>
         </div>
       </a>
   </template>
@@ -46,15 +46,24 @@ Deck Element for Deko
       is: 'deko-deck',
 
       properties: {
+         /**
+       * Name of the Deck
+       */
         deckName: {
           type: String,
           value: 'Home',
         },
+        /**
+       * Link to the Deck url
+       */
         deckLink: {
           type: String,
           value: '#',
         },
-        bgColor: {
+         /**
+       * Background color of the deck
+       */
+        deckColor: {
           type: String,
           value: 'Red',
         }
