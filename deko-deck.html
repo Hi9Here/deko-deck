@@ -8,13 +8,36 @@ Deck Element for Deko
 -->
 
 <dom-module id="deko-deck">
-  <template>
     <style>
       :host {
-        display: block;
+        display: inline-block;
+        text-align: center;
+        height: 100%;
+        background: red;
+        color: #fff;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        padding: 10px 0px 10px 0px;
+      }
+      h2 {
+        transform: rotate(90deg);
+        font-weight: 300;
+	      /*transform-origin: center top 0;*/
+      }
+      #deck-box {
+        height: 100%;
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
       }
     </style>
-    <h2>Hello [[prop1]]</h2>
+  <template>
+      <a href="[[deckLink]]">
+        <div id="deck-box">
+         <h2>[[deckName]]</h2>
+        </div>
+      </a>
   </template>
 
   <script>
@@ -23,10 +46,18 @@ Deck Element for Deko
       is: 'deko-deck',
 
       properties: {
-        prop1: {
+        deckName: {
           type: String,
-          value: 'deko-deck',
+          value: 'Home',
         },
+        deckLink: {
+          type: String,
+          value: '#',
+        },
+        bgColor: {
+          type: String,
+          value: 'Red',
+        }
       },
 
     });

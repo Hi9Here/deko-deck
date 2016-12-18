@@ -3,7 +3,8 @@
   "description": "Deck Element for Deko",
   "main": "deko-deck.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.10"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
