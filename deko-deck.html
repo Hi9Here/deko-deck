@@ -33,50 +33,43 @@ Deck Element for Deko
     </style>
     <a href="[[deckLink]]">
       <div id="deck-box" style="background: [[deckColor]]">
-        <h2>[[deckName]]</h2>
+        <h2>[[name]]</h2>
       </div>
     </a>
   </template>
-  <script>
+</dom-module>
+<script>
     Polymer({
       is: 'deko-deck',
       properties: {
         /**
         * Name of the Deck
         */
-        deckName: {
+        name: {
           type: String,
           value: 'Home',
         },
         /**
         * Link to the Deck url
         */
-        deckLink: {
+        link: {
           type: String,
           value: '#',
         },
         /**
         * Background color of the deck
         */
-        deckColor: {
+        color: {
           type: String,
           value: 'Red',
         },
         /**
-        * Order of the Deck in the pack. 1 being the most right and the selected deck
-        */
-        deckOrder: {
-          type: String,
-          value: '1',
-        },
-        /**
         * If the deck is selected then the title is as the top. By default, it's at the bottom
         */
-        deckAlignment: {
+        selected: {
           type: Boolean,
-          value: 'false',
+          value: false,
         }
       }
     });
-  </script>
-</dom-module>
+ </script>
