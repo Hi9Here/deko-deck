@@ -31,45 +31,45 @@ Deck Element for Deko
         color: #fff;
       }
     </style>
-    <a href="[[deckLink]]">
-      <div id="deck-box" style="background: [[deckColor]]">
+    <a href="[[link]]">
+      <div id="deck-box" style="background: [[color]]">
         <h2>[[name]]</h2>
       </div>
     </a>
   </template>
 </dom-module>
 <script>
-    Polymer({
-      is: 'deko-deck',
-      properties: {
-        /**
-        * Name of the Deck
-        */
-        name: {
-          type: String,
-          value: 'Home',
-        },
-        /**
-        * Link to the Deck url
-        */
-        link: {
-          type: String,
-          value: '#',
-        },
-        /**
-        * Background color of the deck
-        */
-        color: {
-          type: String,
-          value: 'Red',
-        },
-        /**
-        * If the deck is selected then the title is as the top. By default, it's at the bottom
-        */
-        selected: {
-          type: Boolean,
-          value: false,
-        }
+  Polymer({
+    is: 'deko-deck',
+    properties: {
+      /**
+      * Name of the Deck
+      */
+      name: {
+        type: String,
+        value: 'Home',
+      },
+      /**
+      * Link to the Deck url
+      */
+      link: {
+        type: String,
+        value: '#',
+      },
+      /**
+      * Background color of the deck
+      */
+      color: {
+        type: String,
+        value: 'Red',
+      },
+      /**
+      * If the deck is selected then the title is as the top. By default, it's at the bottom
+      */
+      selected: {
+        type: Boolean,
+        value: false,
       }
-    });
- </script>
+    }
+  })
+</script>
