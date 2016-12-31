@@ -11,7 +11,6 @@ Deck Element for Deko
     <style>
       :host {
         display: inline-block;
-        text-align: center;
         height: 100%;
         color: #fff;
         font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -19,7 +18,6 @@ Deck Element for Deko
       h2 {
         transform: rotate(90deg);
         font-weight: 300;
-	      /*transform-origin: center top 0;*/
       }
       #deck-box {
         height: 100%;
@@ -46,33 +44,40 @@ Deck Element for Deko
       is: 'deko-deck',
 
       properties: {
-         /**
-       * Name of the Deck
-       */
+        /**
+        * Name of the Deck
+        */
         deckName: {
           type: String,
           value: 'Home',
         },
         /**
-       * Link to the Deck url
-       */
+        * Link to the Deck url
+        */
         deckLink: {
           type: String,
           value: '#',
         },
-         /**
-       * Background color of the deck
-       */
+        /**
+        * Background color of the deck
+        */
         deckColor: {
           type: String,
           value: 'Red',
         },
         /**
-       * Title at the Top
-       */
-        deckLink: {
-          type: Boolean,
-          value: 'true',
+        * Order of the Deck in the pack. 1 being the most right and the selected deck
+        */
+        deckOrder: {
+          type: String,
+          value: '1',
+        },
+        /**
+        * If the deck is selected then the title is as the top. By default, it's at the bottom
+        */
+        deckAlignment: {
+          type: boolean,
+          value: 'false',
         }
       }
     });
