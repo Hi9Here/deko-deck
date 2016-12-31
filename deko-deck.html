@@ -8,6 +8,7 @@ Deck Element for Deko
 -->
 
 <dom-module id="deko-deck">
+  <template>
     <style>
       :host {
         display: inline-block;
@@ -30,19 +31,15 @@ Deck Element for Deko
         color: #fff;
       }
     </style>
-  <template>
-      <a href="[[deckLink]]">
-        <div id="deck-box" style="background: [[deckColor]]">
-          <h2>[[deckName]]</h2>
-        </div>
-      </a>
+    <a href="[[deckLink]]">
+      <div id="deck-box" style="background: [[deckColor]]">
+        <h2>[[deckName]]</h2>
+      </div>
+    </a>
   </template>
-
   <script>
     Polymer({
-
       is: 'deko-deck',
-
       properties: {
         /**
         * Name of the Deck
