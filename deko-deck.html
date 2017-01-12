@@ -3,15 +3,16 @@
 <!--
 `deko-deck`
 Deck Element for Deko
-
 @demo demo/index.html 
 -->
 
 <dom-module id="deko-deck">
+  <template>
     <style>
       :host {
         display: inline-block;
         height: 100%;
+        width:3em;
         color: #fff;
         font-family: Roboto, Arial, Helvetica, sans-serif;
       }
@@ -30,56 +31,46 @@ Deck Element for Deko
         color: #fff;
       }
     </style>
-  <template>
-      <a href="[[deckLink]]">
-        <div id="deck-box" style="background: [[deckColor]]">
-          <h2>[[deckName]]</h2>
-        </div>
-      </a>
+    <a href="[[link]]">
+      <div id="deck-box" style="background: [[color]]">
+        <h2>[[name]]</h2>
+      </div>
+    </a>
   </template>
 
-  <script>
-    Polymer({
-
-      is: 'deko-deck',
-
-      properties: {
-        /**
-        * Name of the Deck
-        */
-        deckName: {
-          type: String,
-          value: 'Home',
-        },
-        /**
-        * Link to the Deck url
-        */
-        deckLink: {
-          type: String,
-          value: '#',
-        },
-        /**
-        * Background color of the deck
-        */
-        deckColor: {
-          type: String,
-          value: 'Red',
-        },
-        /**
-        * Order of the Deck in the pack. 1 being the most right and the selected deck
-        */
-        deckOrder: {
-          type: String,
-          value: '1',
-        },
-        /**
-        * If the deck is selected then the title is as the top. By default, it's at the bottom
-        */
-        deckAlignment: {
-          type: Boolean,
-          value: 'false',
-        }
-      }
-    });
-  </script>
 </dom-module>
+<script>
+  Polymer({
+    is: 'deko-deck',
+    properties: {
+      /**
+      * Name of the Deck
+      */
+      name: {
+        type: String,
+        value: 'Home',
+      },
+      /**
+      * Link to the Deck url
+      */
+      link: {
+        type: String,
+        value: '#',
+      },
+      /**
+      * Background color of the deck
+      */
+      color: {
+        type: String,
+        value: 'Red',
+      },
+      /**
+      * If the deck is selected then the title is as the top. By default, it's at the bottom
+      */
+      selected: {
+        type: Boolean,
+        value: false,
+      }
+    }
+  })
+</script>
