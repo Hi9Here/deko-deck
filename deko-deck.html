@@ -18,6 +18,16 @@ Deck Element for Deko
         color: #fff;
         font-family: Roboto, Arial, Helvetica, sans-serif;
       }
+      #deck-box {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        padding: 10px 0px 10px 0px;
+        opacity: 0.9;
+      }
+      #deck-box:hover  {
+        opacity: 1;
+      }
       .title {
         @apply(--paper-font-title);
         position: relative;
@@ -40,19 +50,13 @@ Deck Element for Deko
         /* Internet Explorer */
         filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       }
-      #deck-box {
-        height: 100%;
-        width: 100%;
-        display: inline-block;
-        padding: 10px 0px 10px 0px;
-      }
       a {
         text-decoration: none;
         color: #fff;
       }
     </style>
     <a href="[[link]]">
-      <div id="deck-box" style="background: [[color]]">
+      <div id="deck-box" style="background: [[color]];">
         <div class="title rotate">[[name]]</div>
       </div>
     </a>
