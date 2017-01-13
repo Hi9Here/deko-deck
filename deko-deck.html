@@ -17,8 +17,27 @@ Deck Element for Deko
         font-family: Roboto, Arial, Helvetica, sans-serif;
       }
       h2 {
-        transform: rotate(90deg);
+        position: relative;
+        display: inline-block;
+        text-align: center;
         font-weight: 300;
+        left: -325px;
+        width: 700px;
+        top: 330px;
+        vertical-align: top;
+        text-align: left;
+      }
+      .rotate {
+        /* Safari */
+        -webkit-transform: rotate(90deg);
+        /* Firefox */
+        -moz-transform: rotate(90deg);
+        /* IE */
+        -ms-transform: rotate(90deg);
+        /* Opera */
+        -o-transform: rotate(90deg);
+        /* Internet Explorer */
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       }
       #deck-box {
         height: 100%;
@@ -33,7 +52,7 @@ Deck Element for Deko
     </style>
     <a href="[[link]]">
       <div id="deck-box" style="background: [[color]]">
-        <h2>[[name]]</h2>
+        <h2 class="rotate">[[name]]</h2>
       </div>
     </a>
   </template>
