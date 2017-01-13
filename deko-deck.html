@@ -1,4 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-styles/typography.html">
+
 
 <!--
 `deko-deck`
@@ -16,14 +18,13 @@ Deck Element for Deko
         color: #fff;
         font-family: Roboto, Arial, Helvetica, sans-serif;
       }
-      h2 {
+      .title {
+        @apply(--paper-font-title);
         position: relative;
         display: inline-block;
-        text-align: center;
-        font-weight: 300;
         left: -325px;
         width: 700px;
-        top: 330px;
+        top: 350px;
         vertical-align: top;
         text-align: left;
       }
@@ -52,7 +53,7 @@ Deck Element for Deko
     </style>
     <a href="[[link]]">
       <div id="deck-box" style="background: [[color]]">
-        <h2 class="rotate">[[name]]</h2>
+        <div class="title rotate">[[name]]</div>
       </div>
     </a>
   </template>
