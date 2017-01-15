@@ -34,11 +34,11 @@ Deck Element for Deko
         display: inline-block;
         left: -325px;
         width: 700px;
-        top: 350px;
         vertical-align: top;
         text-align: left;
       }
       .rotate {
+        top: 350px;
         /* Safari */
         -webkit-transform: rotate(90deg);
         /* Firefox */
@@ -50,14 +50,27 @@ Deck Element for Deko
         /* Internet Explorer */
         filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       }
+      .rotateup {
+        top: 260px;
+        /* Safari */
+        -webkit-transform: rotate(-90deg);
+        /* Firefox */
+        -moz-transform: rotate(-90deg);
+        /* IE */
+        -ms-transform: rotate(-90deg);
+        /* Opera */
+        -o-transform: rotate(-90deg);
+        /* Internet Explorer */
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+      }
       a {
         text-decoration: none;
         color: #fff;
       }
     </style>
     <a href="[[link]]">
-      <div id="deck-box" style="background: [[color]];">
-        <div class="title rotate">[[name]]</div>
+      <div id="deck-box" style="background:[[color]];">
+        <div class$="title [[alignm]]">[[name]]</div>
       </div>
     </a>
   </template>
@@ -94,6 +107,13 @@ Deck Element for Deko
       selected: {
         type: Boolean,
         value: false,
+      },
+      /**
+      * Alignment up or down
+      */
+      alignm: {
+        type: String,
+        value: 'rotate',
       }
     }
   })
