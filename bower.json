@@ -4,7 +4,8 @@
   "main": "deko-deck.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "paper-styles": "PolymerElements/paper-styles#^1.1.5"
+    "paper-styles": "PolymerElements/paper-styles#^1.1.5",
+    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.11"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

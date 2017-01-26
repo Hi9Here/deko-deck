@@ -1,5 +1,7 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-styles/typography.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 
 
 <!--
@@ -13,64 +15,38 @@ Deck Element for Deko
     <style>
       :host {
         display: inline-block;
-        height: 100%;
         width:3em;
-        color: #fff;
         font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-weight: 300;
       }
       #deck-box {
-        height: 100%;
-        width: 100%;
-        display: inline-block;
-        padding: 10px 0px 10px 0px;
         opacity: 0.9;
+        height: 100vh;
       }
       #deck-box:hover  {
         opacity: 1;
       }
-      .title {
-        @apply(--paper-font-title);
-        position: relative;
-        display: inline-block;
-        left: -325px;
-        width: 700px;
-        vertical-align: top;
-        text-align: left;
-      }
       .rotate {
-        top: 350px;
-        /* Safari */
-        -webkit-transform: rotate(90deg);
-        /* Firefox */
-        -moz-transform: rotate(90deg);
-        /* IE */
-        -ms-transform: rotate(90deg);
-        /* Opera */
-        -o-transform: rotate(90deg);
-        /* Internet Explorer */
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        top: 70%;
+        position: relative;
       }
       .rotateup {
-        top: 260px;
-        /* Safari */
-        -webkit-transform: rotate(-90deg);
-        /* Firefox */
-        -moz-transform: rotate(-90deg);
-        /* IE */
-        -ms-transform: rotate(-90deg);
-        /* Opera */
-        -o-transform: rotate(-90deg);
-        /* Internet Explorer */
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       }
-      a {
-        text-decoration: none;
-        color: #fff;
+      svg {
+        width: 100%;
+        height: 100%
       }
+
     </style>
     <a href="[[link]]">
       <div id="deck-box" style="background:[[color]];">
-        <div class$="title [[alignm]]">[[name]]</div>
+
+        <div class$="[[alignm]]">
+          <svg>
+            <text x="0" y="0" style="fill:#fff;" transform="translate(30) rotate(-90 50 50)">[[name]]</text>
+          </svg>
+        </div>
+
       </div>
     </a>
   </template>
