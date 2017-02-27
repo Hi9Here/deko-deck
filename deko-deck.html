@@ -37,7 +37,7 @@ Deck Element for Deko
 
     </style>
     <a href="[[link]]">
-      <div id="deck-box" style="background:[[color]];">
+      <div id="deck-box" style="background:[[bg]];color:[[fg]]">
 
         <div class$="[[alignm]]">
           <svg>
@@ -89,7 +89,33 @@ Deck Element for Deko
       alignm: {
         type: String,
         value: 'rotate',
+      },
+      bg:{
+        type:String,
+        computed:"getBg(name,color)",
+      },
+      fg:{
+        type:String,
+        computed:"getFg(bg)",
+      },
+      size:{
+        value:36,
+        type:Number,
+      },
+      email:{
+        value:"",
       }
-    }
+    },
+    getBg: function(name,color){
+      return color || Please.make_color({from_hash: name})
+    },
+    getFg: function(bg){
+      if (bg > "#8") {
+        return "#000"
+      } else {
+        return "#FFF"
+      }
+    },
+    
   })
 </script>
