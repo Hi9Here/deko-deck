@@ -3,7 +3,9 @@
   "description": "Deck Element for Deko",
   "main": "deko-deck.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0",
+    "polymer": "Polymer/polymer#^1.8.0",
+    
+    "please-js": "marcus7777/please-js",
     "paper-styles": "PolymerElements/paper-styles#^1.1.5",
     "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.11"
   },
