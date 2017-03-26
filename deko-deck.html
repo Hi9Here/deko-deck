@@ -21,9 +21,9 @@ Deck Element for Deko
       #deck-box {
         opacity: 0.9;
         height: 100vh;
+        width:48px;
       }
       #deck-box div {
-        min-width: 400px;
         display: inline-block;
         position: relative;
         margin-top: 15px;
@@ -31,21 +31,20 @@ Deck Element for Deko
         transform: rotate(90deg);
         transform-origin: left top 0;
         font-size: 18px;
+        
       }
       #deck-box:hover  {
         opacity: 1;
       }
-      a[selected] {
+      div[selected] {
         top: 70%;
         position: relative;
       }
 
     </style>
-    <a href="[[link]]" selected="[[selected]]">
-      <div id="deck-box" style="background:[[bg]];color:[[fg]]">
-        <div >[[name]]</div>
-      </div>
-    </a>
+    <div id="deck-box" style="background:[[bg]];color:[[fg]]">
+      <div selected="[[selected]]">[[name]]</div>
+    </div>
   </template>
 
 </dom-module>
