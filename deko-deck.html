@@ -22,24 +22,28 @@ Deck Element for Deko
         opacity: 0.9;
         height: 100vh;
       }
+      #deck-box div {
+        min-width: 400px;
+        display: inline-block;
+        position: relative;
+        margin-top: 15px;
+        margin-left: 25px;
+        transform: rotate(90deg);
+        transform-origin: left top 0;
+        font-size: 18px;
+      }
       #deck-box:hover  {
         opacity: 1;
       }
-      .rotate {
+      a[selected] {
         top: 70%;
         position: relative;
       }
 
     </style>
-    <a href="[[link]]">
+    <a href="[[link]]" selected="[[selected]]">
       <div id="deck-box" style="background:[[bg]];color:[[fg]]">
-
-        <div class$="[[alignm]]">
-          <svg>
-            <text x="0" y="0" fill$="[[fg]]" transform="translate(30) rotate(-90 50 50)">[[name]]</text>
-          </svg>
-        </div>
-
+        <div >[[name]]</div>
       </div>
     </a>
   </template>
@@ -77,13 +81,6 @@ Deck Element for Deko
       selected: {
         type: Boolean,
         value: false,
-      },
-      /**
-      * Alignment up or down
-      */
-      alignm: {
-        type: String,
-        value: 'rotate',
       },
       bg:{
         type:String,
