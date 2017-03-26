@@ -39,13 +39,18 @@ Deck Element for Deko
       #deck-box:hover {
         opacity: 1;
       }
-      [selected] #deck-box div {
+       #deck-box[selected] div {
         top:0
       }
 
     </style>
     <div id="deck-box" style="background:[[bg]];color:[[fg]]">
-      <div selected="[[selected]]">[[name]]</div>
+      <template is="dom-if" if="[[selected]]">
+        <div selected>[[name]]</div>
+      </template>
+      <template is="dom-if" if="[[!selected]]">
+        <div>[[name]]</div>
+      </template>
     </div>
   </template>
 
@@ -82,7 +87,6 @@ Deck Element for Deko
       selected: {
         type: Boolean,
         value: false,
-        reflectToAttribute: true,
       },
       bg:{
         type:String,
