@@ -13,7 +13,7 @@
   <body>
     <test-fixture id="dekoDeck">
       <template>
-        <deko-deck color="red" link="#"></deko-deck>
+        <deko-deck color="red" name="test"></deko-deck>
       </template>
     </test-fixture>
     <script>
@@ -30,36 +30,19 @@
             assert.equal(deko.is, 'deko-deck');
           });
 
-          test('link has a value of #', function() {
-            var linkvalue = Polymer.dom(deko.root).querySelector('a href');
-            assert.equal(linkvalue.is, "#");
+          test('color of deck is red', function() {
+            var deckbgcolor = Polymer.dom(deko.root).querySelector('#deck-box');
+            assert.equal(deckbgcolor.style.backgroundColor, "red");
           });
 
-          // test('paper-toolbar has a color with a value of red', function() {
-          //   var toolbr = Polymer.dom(deko.root).querySelector('paper-toolbar');
-          //   assert.equal(toolbr.style.backgroundColor, "red");
-          // });
-
-          // TODO Get Working
-          // test('edit button is showing', function() {
-          //   var editbutt = Polymer.dom(dekoCard.root).querySelector('#edit');
-          //   assert.equal(editbutt.icon, "more-vert");
+          // TODO Create a Name Test
+          // test('name is test', function() {
+          //   var deckName = Polymer.dom(deko.root).querySelector('deko-deck');
+          //   assert.equal(deckName.name, "test");
           // });
 
         });
 
-        // TODO Get Working
-// These test allow you to interact with the element
-        // suite('edit more tests', function () {
-			
-        //   test('edit button can be clicked when in edit mode', function(done) {	
-        //     var editbutton = Polymer.dom(dekoCard.root).querySelector('paper-toolbar #edit');
-        //     editbutton.addEventListener('click', function() {		
-        //       done()		
-        //     })		
-        //     MockInteractions.tap(dekoCard.editbutton)		
-        //   })
-        // })
       })
 
     </script>
