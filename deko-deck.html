@@ -19,7 +19,7 @@ Deck Element for Deko
       }
       #deck-box {
         opacity: 0.9;
-        height: 100vh;
+        height: 95vh;
         overflow: hidden;
       }
       #deck-box div {
@@ -30,7 +30,7 @@ Deck Element for Deko
         transform: rotate(90deg);
         transform-origin: left top 0;
         font-size: 18px;
-        min-width: 600px;
+        min-width: 95vh;
         line-height: 5px;
         text-align: right;
       }
@@ -40,7 +40,6 @@ Deck Element for Deko
       #deck-box div[selected]{
         text-align: left;
       }
-
     </style>
     <div id="deck-box" style="background:[[bg]];color:[[fg]]">
       <template is="dom-if" if="[[selected]]">
