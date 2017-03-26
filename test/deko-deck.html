@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <title>deko-deck</title>
+    <script src="../../webcomponentsjs/webcomponents.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+    <script src="../../iron-test-helpers/mock-interactions.js"></script>
+    <link rel="import" href="../../polymer/polymer.html">
+    <link rel="import" href="../../test-fixture/test-fixture.html">
+    <link rel="import" href="../deko-deck.html">
+  </head>
+  <body>
+    <test-fixture id="dekoDeck">
+      <template>
+        <deko-deck color="red" link="#"></deko-deck>
+      </template>
+    </test-fixture>
+    <script>
+      suite('<deko-deck>', function () {
+        var deko;
+        setup(function () {
+          deko = fixture('dekoDeck');
+        });
+
+// These tests assert whether the attributes are working
+        suite('deko-app tests', function() {
+
+          test('instantiating the element works', function() {
+            assert.equal(deko.is, 'deko-deck');
+          });
+
+          test('link has a value of #', function() {
+            var linkvalue = Polymer.dom(deko.root).querySelector('a href');
+            assert.equal(linkvalue.is, "#");
+          });
+
+          // test('paper-toolbar has a color with a value of red', function() {
+          //   var toolbr = Polymer.dom(deko.root).querySelector('paper-toolbar');
+          //   assert.equal(toolbr.style.backgroundColor, "red");
+          // });
+
+          // TODO Get Working
+          // test('edit button is showing', function() {
+          //   var editbutt = Polymer.dom(dekoCard.root).querySelector('#edit');
+          //   assert.equal(editbutt.icon, "more-vert");
+          // });
+
+        });
+
+        // TODO Get Working
+// These test allow you to interact with the element
+        // suite('edit more tests', function () {
+			
+        //   test('edit button can be clicked when in edit mode', function(done) {	
+        //     var editbutton = Polymer.dom(dekoCard.root).querySelector('paper-toolbar #edit');
+        //     editbutton.addEventListener('click', function() {		
+        //       done()		
+        //     })		
+        //     MockInteractions.tap(dekoCard.editbutton)		
+        //   })
+        // })
+      })
+
+    </script>
+  </body>
+</html>
