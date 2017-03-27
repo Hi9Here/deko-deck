@@ -7,7 +7,7 @@ Deck Element for Deko
 @demo demo/index.html 
 -->
 
-<dom-module id="deko-deck">
+<dom-module id="deko-pillar">
   <template>
     <style>
       :host {
@@ -43,10 +43,10 @@ Deck Element for Deko
     </style>
     <div id="deck-box" style="background:[[bg]];color:[[fg]]">
       <template is="dom-if" if="[[selected]]">
-        <div selected>[[name]]</div>
+        <div selected><content></content></div>
       </template>
       <template is="dom-if" if="[[!selected]]">
-        <div>[[name]]</div>
+        <div><content></content></div>
       </template>
     </div>
   </template>
@@ -54,16 +54,8 @@ Deck Element for Deko
 </dom-module>
 <script>
   Polymer({
-    is: 'deko-deck',
+    is: 'deko-pillar',
     properties: {
-      /**
-      * Name of the Deck
-      */
-      name: {
-        type: String,
-        value: 'Home',
-        notify:true,
-      },
       /**
       * Link to the Deck url
       */
@@ -87,7 +79,7 @@ Deck Element for Deko
       },
       bg:{
         type:String,
-        computed:"getBg(name,color)",
+        computed:"getBg(color)",
       },
       fg:{
         type:String,
@@ -97,12 +89,9 @@ Deck Element for Deko
         value:36,
         type:Number,
       },
-      email:{
-        value:"",
-      }
     },
-    getBg: function(name,color){
-      return color || Please.make_color({from_hash: name})
+    getBg: function(color){
+      return color || Please.make_color({from_hash: this.innerText})
     },
     getFg: function(bg){
       var c = bg.substring(1);     // strip #
