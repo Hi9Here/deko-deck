@@ -41,7 +41,7 @@ Deck Element for Deko
         text-align: left;
       }
     </style>
-    <div id="deck-box" style="background:[[bg]];color:[[fg]]">
+    <div id="deck-box" style="background:[[_bg]];color:[[_fg]]">
       <template is="dom-if" if="[[selected]]">
         <div selected><content></content></div>
       </template>
@@ -77,17 +77,13 @@ Deck Element for Deko
         type: Boolean,
         value: false,
       },
-      bg:{
+      _bg:{
         type:String,
         computed:"getBg(color)",
       },
-      fg:{
+      _fg:{
         type:String,
-        computed:"getFg(bg)",
-      },
-      size:{
-        value:36,
-        type:Number,
+        computed:"getFg(_bg)",
       },
     },
     getBg: function(color){
