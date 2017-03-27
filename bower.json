@@ -1,7 +1,7 @@
 {
-  "name": "deko-deck",
-  "description": "Deck Element for Deko",
-  "main": "deko-deck.html",
+  "name": "deko-pillar",
+  "description": "Pillar UI Element for Deko App",
+  "main": "deko-pillar.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.8.0",
     "please-js": "marcus7777/please-js",

@@ -8,26 +8,26 @@
     <script src="../../iron-test-helpers/mock-interactions.js"></script>
     <link rel="import" href="../../polymer/polymer.html">
     <link rel="import" href="../../test-fixture/test-fixture.html">
-    <link rel="import" href="../deko-deck.html">
+    <link rel="import" href="../deko-pillar.html">
   </head>
   <body>
-    <test-fixture id="dekoDeck">
+    <test-fixture id="dekoPillar">
       <template>
-        <deko-deck color="red" name="test"></deko-deck>
+        <deko-pillar color="red" name="test"></deko-pillar>
       </template>
     </test-fixture>
     <script>
-      suite('<deko-deck>', function () {
+      suite('<deko-pillar>', function () {
         var deko;
         setup(function () {
-          deko = fixture('dekoDeck');
+          deko = fixture('dekoPillar');
         });
 
 // These tests assert whether the attributes are working
         suite('deko-app tests', function() {
 
           test('instantiating the element works', function() {
-            assert.equal(deko.is, 'deko-deck');
+            assert.equal(deko.is, 'deko-pillar');
           });
 
           test('color of deck is red', function() {
@@ -37,7 +37,7 @@
 
           // TODO Create a Name Test
           // test('name is test', function() {
-          //   var deckName = Polymer.dom(deko.root).querySelector('deko-deck');
+          //   var deckName = Polymer.dom(deko.root).querySelector('deko-pillar');
           //   assert.equal(deckName.name, "test");
           // });
 
