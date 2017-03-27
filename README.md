@@ -1,12 +1,12 @@
 ## deko-pillar
 
-[![Build Status](https://travis-ci.org/Hi9Here/deko-deck.svg?branch=master)](https://travis-ci.org/Hi9Here/deko-deck)
+[![Build Status](https://travis-ci.org/Hi9Here/deko-pillar.svg?branch=master)](https://travis-ci.org/Hi9Here/deko-pillar)
 
-`deko-pillar` these are the vertical pillars which point to collections of [deck-card](https://github.com/hi9here/deck-card) which are inside [deck-cards](https://github.com/hi9here/deck-cards)
+`deko-pillar` these are the vertical pillars which point to collections of [pillar-card](https://github.com/hi9here/pillar-card) which are inside [pillar-cards](https://github.com/hi9here/pillar-cards)
 
 
 Examples
 
 ```html
-<deko-deck color="orange">Kate</deko-deck>
+<deko-pillar color="orange">Kate</deko-pillar>
 ```

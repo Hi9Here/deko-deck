@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>deko-deck</title>
+    <title>deko-pillar</title>
     <script src="../../webcomponentsjs/webcomponents.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
     <script src="../../test-fixture/test-fixture-mocha.js"></script>
@@ -30,16 +30,10 @@
             assert.equal(deko.is, 'deko-pillar');
           });
 
-          test('color of deck is red', function() {
+          test('color of pillar is red', function() {
             var deckbgcolor = Polymer.dom(deko.root).querySelector('#deck-box');
             assert.equal(deckbgcolor.style.backgroundColor, "red");
           });
-
-          // TODO Create a Name Test
-          // test('name is test', function() {
-          //   var deckName = Polymer.dom(deko.root).querySelector('deko-pillar');
-          //   assert.equal(deckName.name, "test");
-          // });
 
         });
 
