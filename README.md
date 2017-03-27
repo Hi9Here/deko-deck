@@ -7,5 +7,5 @@
 Examples
 
 ```html
-<deko-deck color="orange">Kate</deko-deck>
+<deko-deck color="#993300">Kate</deko-deck>
 ```
