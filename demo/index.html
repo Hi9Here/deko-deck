@@ -14,42 +14,19 @@
     <link rel="import" href="../../iron-icon/iron-icon.html">
     <link rel="import" href="../../iron-icons/iron-icons.html">
 
-    <style is="custom-style">
-      .container {
-       display: block;
-       text-align: center;
-       width: 100%;
-      }
-      paper-drawer-panel {
-        text-align: right;
-        min-height: 100vh;
-        position: relative;
-        margin: 0;
-      }
-    </style>
 
   </head>
 
   <body>
   
-    <paper-drawer-panel>
+    <paper-drawer-panel drawer-width="192px">
       <paper-header-panel drawer>
-        <paper-toolbar>Pillars</paper-toolbar>
         <deko-pillar color="red">Pillar</deko-pillar> 
         <deko-pillar color="blue">More</deko-pillar> 
         <deko-pillar color="green">Home</deko-pillar> 
-        <deko-pillar color="purple">Josh</deko-pillar> 
-        <deko-pillar color="orange" selected>Kate</deko-pillar> 
+        <deko-pillar color="purple">Josh</deko-pillar>
       </paper-header-panel>
-      <paper-header-panel main>
-        <paper-toolbar>
-          <paper-icon-button icon="view-week" paper-drawer-toggle></paper-icon-button>
-          <div class="flex">Demo of Pillars</div>
-        </paper-toolbar>
-        <div class="container">
-          <deko-pillar name="Much Longer"></deko-pillar> 
-        </div>
-      </paper-header-panel>
+      <paper-header-panel main><deko-pillar selected>Kate Selected</deko-pillar></paper-header-panel>
     </paper-drawer-panel>
 
   </body>
