@@ -8,5 +8,6 @@
 Examples
 
 ```html
-<deko-pillar color="orange">Kate</deko-pillar>
+<deko-pillar color="#993300">Kate</deko-pillar>
+
 ```
